@@ -1,0 +1,44 @@
+name: Add a directory
+description: Suggest a launch directory to add to the list
+title: "[Add] "
+labels: ["directory"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Directory name
+      placeholder: Example Launch
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: https://example.com/
+    validations: { required: true }
+  - type: input
+    id: price
+    attributes:
+      label: Price of a standard listing (USD)
+      description: Use 0 for free. Number only.
+      placeholder: "19"
+    validations: { required: true }
+  - type: input
+    id: dr
+    attributes:
+      label: Ahrefs Domain Rating
+      description: Leave blank if you couldn't measure it — please don't guess.
+      placeholder: "68"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Free tier? Queue length? Nofollow links? Anything a submitter should know.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: The site is live and has published listings recently
+          required: true
+        - label: I have disclosed below if I own or work on this directory
+          required: true

@@ -1,0 +1,27 @@
+name: Correction
+description: Report a wrong price, stale DR, dead link, or a directory that should be skipped
+title: "[Fix] "
+labels: ["correction"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Which directory?
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options:
+        - Price changed
+        - DR is stale
+        - Dead or parked site
+        - Should be marked skipped
+        - Other
+    validations: { required: true }
+  - type: textarea
+    id: detail
+    attributes:
+      label: Details
+      description: What it says now, what it should say, and how you checked.
+    validations: { required: true }
