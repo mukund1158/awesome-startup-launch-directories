@@ -206,7 +206,7 @@
       "priceUsd": 11,
       "dr": 45,
       "status": "active",
-      "notes": "Maintainer's own product \u2014 see disclosure. Ranked by DR like everything else.",
+      "notes": "Maintainer's own product - see disclosure. Ranked by DR like everything else.",
       "linkPolicy": "dofollow",
       "linkPolicyEvidence": "https://noonlaunch.com/product/colleator",
       "linkPolicyCheckedOn": "2026-09-06",
@@ -247,7 +247,7 @@
       "priceUsd": 10,
       "dr": 71,
       "status": "skipped",
-      "notes": "Far more outgoing than incoming links \u2014 weak link equity for the price."
+      "notes": "Far more outgoing than incoming links - weak link equity for the price."
     },
     {
       "name": "Index by Dodo Payments",
@@ -255,7 +255,7 @@
       "priceUsd": 0,
       "dr": null,
       "status": "skipped",
-      "notes": "Curated \u2014 not accepting general submissions."
+      "notes": "Curated - not accepting general submissions."
     },
     {
       "name": "PromoteProject",

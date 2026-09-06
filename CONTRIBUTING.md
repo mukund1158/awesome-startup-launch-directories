@@ -1,6 +1,6 @@
 # Contributing
 
-Everything lives in [`data/directories.json`](data/directories.json). **Never edit the README tables by hand** — they are generated.
+Everything lives in [`data/directories.json`](data/directories.json). **Never edit the README tables by hand** - they are generated.
 
 ## Adding or correcting a directory
 
@@ -34,7 +34,7 @@ CI runs `node scripts/generate.mjs --check` and fails if the README wasn't regen
 
 ## Bar for inclusion
 
-A directory gets in if it is live, actually lists products, and a submission results in a real page with a real link. It gets `status: "skipped"` (rather than deletion) if it was evaluated and rejected — the reason is the useful part.
+A directory gets in if it is live, actually lists products, and a submission results in a real page with a real link. It gets `status: "skipped"` (rather than deletion) if it was evaluated and rejected - the reason is the useful part.
 
 Reasons to reject:
 
@@ -46,8 +46,8 @@ Reasons to reject:
 
 ## Prices and DR
 
-Both drift. If you update figures, bump `meta.lastUpdated` in the JSON in the same PR. Please state in the PR where the DR came from (Ahrefs free checker, paid Ahrefs, etc.) — a mixed-source number is worse than an absent one.
+Both drift. If you update figures, bump `meta.lastUpdated` in the JSON in the same PR. Please state in the PR where the DR came from (Ahrefs free checker, paid Ahrefs, etc.) - a mixed-source number is worse than an absent one.
 
 ## Self-submissions
 
-If you own or work on a directory, you may submit it — **disclose that in the PR description**. It will be held to the same bar as anything else. Undisclosed self-promotion gets closed.
+If you own or work on a directory, you may submit it - **disclose that in the PR description**. It will be held to the same bar as anything else. Undisclosed self-promotion gets closed.

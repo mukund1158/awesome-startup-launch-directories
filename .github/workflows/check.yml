@@ -17,3 +17,11 @@ jobs:
         run: node scripts/validate.mjs
       - name: README is in sync with the dataset
         run: node scripts/generate.mjs --check
+
+      - name: No em or en dashes in tracked files
+        run: |
+          if git grep -nP '[\x{2013}\x{2014}]' -- . ; then
+            echo "::error::Found em or en dashes above. Use a plain hyphen."
+            exit 1
+          fi
+          echo "No em or en dashes found."

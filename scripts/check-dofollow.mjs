@@ -28,7 +28,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const { directories } = JSON.parse(readFileSync(join(root, 'data', 'directories.json'), 'utf8'));
 
 const TIMEOUT_MS = 25_000;
-const MAX_LISTING_PAGES = 8; // per directory — small samples flip verdicts between runs
+const MAX_LISTING_PAGES = 8; // per directory - small samples flip verdicts between runs
 const UA = 'Mozilla/5.0 (compatible; launch-directories-audit/1.0; +https://github.com/mukund1158/awesome-startup-launch-directories)';
 
 /** Paths that typically identify a single product/listing page. */
@@ -88,7 +88,7 @@ function anchors(html, baseUrl) {
 
 /**
  * The "visit the product" call-to-action on a listing page. Only this link's
- * rel attribute answers the question people actually care about — averaging
+ * rel attribute answers the question people actually care about - averaging
  * every outbound link on the page mixes in footer sponsors, ads and the site's
  * own social links, which is how you end up publishing a confident wrong
  * answer. Anchor text that is a bare domain counts too: plenty of directories
@@ -174,7 +174,7 @@ for (const d of targets) {
 }
 
 const tally = results.reduce((acc, r) => ({ ...acc, [r.verdict]: (acc[r.verdict] ?? 0) + 1 }), {});
-console.log(`\n${targets.length} audited —`, tally);
+console.log(`\n${targets.length} audited -`, tally);
 
 const jsonFlag = process.argv.indexOf('--json');
 if (jsonFlag !== -1) {

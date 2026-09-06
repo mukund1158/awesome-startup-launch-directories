@@ -75,7 +75,7 @@ const targets = directories.filter((d) => d.url);
 const results = await pool(targets, CONCURRENCY, async (d) => ({ ...d, ...(await probe(d.url)) }));
 
 /**
- * 403/429/503 mean a bot shield answered, not that the site is gone — several
+ * 403/429/503 mean a bot shield answered, not that the site is gone - several
  * of these directories sit behind Cloudflare. Counting those as broken would
  * make the weekly job cry wolf until people ignore it, so they are reported
  * separately and never fail the build.
@@ -96,7 +96,7 @@ if (process.argv.includes('--markdown')) {
     lines.push(
       `### Blocked by bot protection (${blocked.length})`,
       '',
-      'Not necessarily broken — verify by hand in a browser.',
+      'Not necessarily broken - verify by hand in a browser.',
       '',
       '| Directory | URL | Result |',
       '|---|---|---|',

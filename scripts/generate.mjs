@@ -24,12 +24,12 @@ const { meta, directories } = JSON.parse(readFileSync(dataPath, 'utf8'));
 const price = (d) => (d.priceUsd === 0 ? 'Free' : `$${d.priceUsd.toFixed(2).replace(/\.00$/, '')}`);
 
 /**
- * "DR per dollar" — a rough cost-efficiency score so you can spend a small
+ * "DR per dollar" - a rough cost-efficiency score so you can spend a small
  * budget on the highest-authority placements first. Free listings have no
  * meaningful ratio, so they are marked separately rather than as Infinity.
  */
 const value = (d) => {
-  if (d.dr == null) return '—';
+  if (d.dr == null) return '-';
   if (d.priceUsd === 0) return '∞';
   return (d.dr / d.priceUsd).toFixed(1);
 };
@@ -42,7 +42,7 @@ const link = (d) => (d.url ? `[${d.name}](${d.url})` : d.name);
  * completely different purchases. Measured by scripts/check-dofollow.mjs.
  */
 const linkPolicy = (d) => {
-  if (!d.linkPolicy) return '—';
+  if (!d.linkPolicy) return '-';
   if (d.linkPolicy === 'mixed') return `mixed (${d.linkPolicySample})`;
   return d.linkPolicy;
 };
@@ -53,7 +53,7 @@ const active = directories.filter((d) => d.status === 'active').sort(byDr);
 const skipped = directories.filter((d) => d.status === 'skipped').sort(byDr);
 
 const row = (d, i) =>
-  `| ${i + 1} | ${link(d)} | ${d.dr ?? '—'} | ${price(d)} | ${value(d)} | ${linkPolicy(d)} | ${d.notes ?? ''} |`;
+  `| ${i + 1} | ${link(d)} | ${d.dr ?? '-'} | ${price(d)} | ${value(d)} | ${linkPolicy(d)} | ${d.notes ?? ''} |`;
 
 const activeTable = [
   '| # | Directory | DR | Price | DR / $ | Links | Notes |',
@@ -64,7 +64,7 @@ const activeTable = [
 const skippedTable = [
   '| Directory | DR | Price | Why it was skipped |',
   '|-----------|---:|------:|--------------------|',
-  ...skipped.map((d) => `| ${link(d)} | ${d.dr ?? '—'} | ${price(d)} | ${d.notes ?? ''} |`),
+  ...skipped.map((d) => `| ${link(d)} | ${d.dr ?? '-'} | ${price(d)} | ${d.notes ?? ''} |`),
 ].join('\n');
 
 const paid = active.filter((d) => d.priceUsd > 0);
@@ -128,5 +128,5 @@ if (process.argv.includes('--check')) {
 } else {
   writeFileSync(readmePath, out);
   writeFileSync(trackerPath, trackerCsv);
-  console.log(`README.md + templates/tracker.csv updated — ${active.length} active, ${skipped.length} skipped.`);
+  console.log(`README.md + templates/tracker.csv updated - ${active.length} active, ${skipped.length} skipped.`);
 }

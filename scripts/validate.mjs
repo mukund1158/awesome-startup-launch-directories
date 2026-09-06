@@ -12,6 +12,20 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const { meta, directories } = JSON.parse(readFileSync(join(root, 'data', 'directories.json'), 'utf8'));
 
 const errors = [];
+
+/**
+ * Em and en dashes are banned in this repo's copy. They also arrive invisibly
+ * as \u2014 escapes when a JSON writer defaults to ASCII, which greps right
+ * past them, so the check runs on the parsed strings rather than the raw file.
+ */
+const DASHES = /[\u2013\u2014]/;
+const scanForDashes = (obj, where) => {
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v === 'string' && DASHES.test(v)) {
+      errors.push(`${where}: field "${k}" contains an em or en dash; use a plain hyphen`);
+    }
+  }
+};
 const seenNames = new Set();
 const seenUrls = new Set();
 
@@ -19,8 +33,11 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(meta?.lastUpdated ?? '')) {
   errors.push('meta.lastUpdated must be a YYYY-MM-DD date');
 }
 
+scanForDashes(meta, 'meta');
+
 for (const d of directories) {
   const at = `"${d.name ?? '(unnamed)'}"`;
+  scanForDashes(d, at);
 
   if (!d.name?.trim()) errors.push(`${at}: missing name`);
   if (seenNames.has(d.name)) errors.push(`${at}: duplicate entry`);
@@ -52,4 +69,4 @@ if (errors.length) {
   for (const e of errors) console.error(`  - ${e}`);
   process.exit(1);
 }
-console.log(`OK — ${directories.length} entries validated.`);
+console.log(`OK - ${directories.length} entries validated.`);
