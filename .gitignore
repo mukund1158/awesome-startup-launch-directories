@@ -4,3 +4,10 @@ node_modules/
 .env
 .idea/
 .vscode/
+
+# Your filled-in copy of the listing kit — keep it out of the repo
+templates/my-listing.md
+templates/my-tracker.csv
+
+# Transient output of scripts/check-links.mjs --markdown
+link-report.md

@@ -1,0 +1,60 @@
+name: link-check
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'   # Mondays, 06:00 UTC
+  workflow_dispatch:       # and on demand
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Probe every URL in the dataset
+        id: check
+        # Never fail the job here: the report is the product, and a broken link
+        # should open an issue rather than paint the repo's badge red.
+        continue-on-error: true
+        run: node scripts/check-links.mjs --markdown
+
+      - name: Open an issue if anything is broken
+        if: steps.check.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('link-report.md', 'utf8');
+            const title = 'Link check: one or more directories are unreachable';
+
+            // Reuse the existing issue instead of opening a new one every week.
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-check',
+            });
+
+            if (open.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: open[0].number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['link-check'],
+              });
+            }

@@ -25,6 +25,11 @@
           "priceUsd": { "type": "number", "minimum": 0 },
           "dr": { "type": ["integer", "null"], "minimum": 0, "maximum": 100 },
           "status": { "enum": ["active", "skipped"] },
+          "featured": { "type": "boolean", "description": "Pinned to a fixed slot and disclosed as maintainer-owned, rather than DR-ranked." },
+          "linkPolicy": { "enum": ["dofollow", "nofollow", "mixed"], "description": "rel attribute on the directory's outbound link to the listed product." },
+          "linkPolicySample": { "type": "string", "description": "Nofollowed CTAs over CTAs sampled, e.g. \"6/8\"." },
+          "linkPolicyEvidence": { "type": "string", "description": "The listing page the verdict was derived from." },
+          "linkPolicyCheckedOn": { "type": "string", "format": "date" },
           "notes": { "type": "string" }
         }
       }

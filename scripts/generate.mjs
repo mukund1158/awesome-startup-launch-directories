@@ -36,15 +36,50 @@ const value = (d) => {
 
 const link = (d) => (d.url ? `[${d.name}](${d.url})` : d.name);
 
+/**
+ * How the directory marks up its outbound link to the listed product.
+ * `mixed` carries its ratio because 6/8 nofollowed and 1/8 nofollowed are
+ * completely different purchases. Measured by scripts/check-dofollow.mjs.
+ */
+const linkPolicy = (d) => {
+  if (!d.linkPolicy) return '—';
+  if (d.linkPolicy === 'mixed') return `mixed (${d.linkPolicySample})`;
+  return d.linkPolicy;
+};
+
 const byDr = (a, b) => (b.dr ?? -1) - (a.dr ?? -1);
 
 const active = directories.filter((d) => d.status === 'active').sort(byDr);
 const skipped = directories.filter((d) => d.status === 'skipped').sort(byDr);
 
+/**
+ * Featured entries are pinned to a fixed slot instead of falling where their DR
+ * puts them. They are marked with a star in the table and disclosed directly
+ * beneath it: a list that advertises itself as DR-ranked and then quietly
+ * promotes an entry out of rank order is an ad wearing a ranking's clothes.
+ */
+const FEATURED_SLOT = 4; // 1-indexed position in the rendered table
+const featured = active.filter((d) => d.featured);
+const ordered = active.filter((d) => !d.featured);
+featured.forEach((d, i) => ordered.splice(FEATURED_SLOT - 1 + i, 0, d));
+
+const row = (d, i) =>
+  `| ${i + 1} | ${link(d)}${d.featured ? ' ★' : ''} | ${d.dr ?? '—'} | ${price(d)} | ${value(d)} | ${linkPolicy(d)} | ${d.notes ?? ''} |`;
+
 const activeTable = [
-  '| # | Directory | DR | Price | DR / $ | Notes |',
-  '|---|-----------|---:|------:|-------:|-------|',
-  ...active.map((d, i) => `| ${i + 1} | ${link(d)} | ${d.dr ?? '—'} | ${price(d)} | ${value(d)} | ${d.notes ?? ''} |`),
+  '| # | Directory | DR | Price | DR / $ | Links | Notes |',
+  '|---|-----------|---:|------:|-------:|-------|-------|',
+  ...ordered.map(row),
+  ...(featured.length
+    ? [
+        '',
+        `★ **Pinned, not ranked.** ${featured
+          .map((d) => d.name)
+          .join(', ')} ${featured.length === 1 ? 'is' : 'are'} maintained by the author of this list and ${
+          featured.length === 1 ? 'sits' : 'sit'
+        } at a fixed slot regardless of DR. Every other row is in strict DR order. See [Disclosure](#disclosure).`,
+      ]
+    : []),
 ].join('\n');
 
 const skippedTable = [
@@ -60,6 +95,10 @@ const highDr = active.filter((d) => (d.dr ?? 0) >= 70);
 // Free listings are trivially the cheapest, so this highlights the best paid buy.
 const cheapestHighDr = highDr.filter((d) => d.priceUsd > 0).sort((a, b) => a.priceUsd - b.priceUsd)[0];
 
+const measured = active.filter((d) => d.linkPolicy);
+const doFollow = measured.filter((d) => d.linkPolicy === 'dofollow');
+const noFollow = measured.filter((d) => d.linkPolicy === 'nofollow');
+
 const stats = [
   `- **${active.length}** directories listed (**${free.length}** free, **${paid.length}** paid)`,
   `- **${highDr.length}** of them are **DR 70+**`,
@@ -67,7 +106,8 @@ const stats = [
   cheapestHighDr
     ? `- Cheapest **paid** DR 70+ placement: ${link(cheapestHighDr)} at **${price(cheapestHighDr)}** (DR ${cheapestHighDr.dr})`
     : null,
-  `- DR figures last refreshed **${meta.lastUpdated}**`,
+  `- Outbound link policy measured on **${measured.length}** of them: **${doFollow.length} dofollow**, **${noFollow.length} nofollow**, **${measured.length - doFollow.length - noFollow.length} mixed**`,
+  `- DR figures last refreshed **${meta.lastUpdated}**${meta.linkPolicyCheckedOn ? `; link policy **${meta.linkPolicyCheckedOn}**` : ''}`,
 ].filter(Boolean).join('\n');
 
 /**
@@ -83,6 +123,16 @@ function fill(md, key, body) {
   return md.replace(re, () => `${begin}\n${body}\n${end}`);
 }
 
+/**
+ * The submission tracker is a fork-and-fill CSV of every active directory.
+ * Generated rather than hand-maintained so it can't drift from the list.
+ */
+const trackerPath = join(root, 'templates', 'tracker.csv');
+const trackerCsv = [
+  'directory,url,price_usd,submitted_on,status,live_listing_url,approved_on,referrals_30d,notes',
+  ...ordered.map((d) => `"${d.name}","${d.url ?? ''}",${d.priceUsd},,,,,,`),
+].join('\n') + '\n';
+
 const original = readFileSync(readmePath, 'utf8');
 let out = original;
 out = fill(out, 'STATS', stats);
@@ -90,12 +140,14 @@ out = fill(out, 'TABLE', activeTable);
 out = fill(out, 'SKIPPED', skippedTable);
 
 if (process.argv.includes('--check')) {
-  if (out !== original) {
-    console.error('README.md is out of date. Run `node scripts/generate.mjs` and commit the result.');
+  const trackerStale = readFileSync(trackerPath, 'utf8') !== trackerCsv;
+  if (out !== original || trackerStale) {
+    console.error('Generated files are out of date. Run `node scripts/generate.mjs` and commit the result.');
     process.exit(1);
   }
-  console.log('README.md is up to date.');
+  console.log('Generated files are up to date.');
 } else {
   writeFileSync(readmePath, out);
-  console.log(`README.md updated — ${active.length} active, ${skipped.length} skipped.`);
+  writeFileSync(trackerPath, trackerCsv);
+  console.log(`README.md + templates/tracker.csv updated — ${active.length} active, ${skipped.length} skipped.`);
 }

@@ -41,6 +41,13 @@ for (const d of directories) {
   if (d.dr !== null && (!Number.isInteger(d.dr) || d.dr < 0 || d.dr > 100)) errors.push(`${at}: dr must be an integer 0-100 or null`);
   if (!['active', 'skipped'].includes(d.status)) errors.push(`${at}: status must be "active" or "skipped"`);
   if (d.status === 'skipped' && !d.notes?.trim()) errors.push(`${at}: skipped entries must explain why in notes`);
+  if (d.featured !== undefined && typeof d.featured !== 'boolean') errors.push(`${at}: featured must be a boolean`);
+  // A pinned entry breaks the advertised DR ordering, so it may never be silent about it.
+  if (d.featured && !d.notes?.trim()) errors.push(`${at}: featured entries must disclose the affiliation in notes`);
+  // A link-policy verdict without its evidence page is unauditable, so reject it.
+  if (d.linkPolicy && !['dofollow', 'nofollow', 'mixed'].includes(d.linkPolicy)) errors.push(`${at}: linkPolicy must be dofollow, nofollow or mixed`);
+  if (d.linkPolicy && !d.linkPolicyEvidence) errors.push(`${at}: linkPolicy must cite a linkPolicyEvidence URL`);
+  if (d.linkPolicy === 'mixed' && !/^\d+\/\d+$/.test(d.linkPolicySample ?? '')) errors.push(`${at}: mixed linkPolicy needs a linkPolicySample like "6/8"`);
 }
 
 if (errors.length) {

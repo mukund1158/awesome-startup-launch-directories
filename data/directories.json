@@ -3,35 +3,268 @@
   "meta": {
     "lastUpdated": "2026-09-06",
     "drSource": "Ahrefs Domain Rating (point-in-time snapshot)",
-    "currency": "USD"
+    "currency": "USD",
+    "linkPolicyCheckedOn": "2026-09-06"
   },
   "directories": [
-    { "name": "Findly Tools",    "url": "https://findly.tools/",         "priceUsd": 29,    "dr": 81, "status": "active" },
-    { "name": "StackShare",      "url": "https://stackshare.io/",        "priceUsd": 0,     "dr": 78, "status": "active", "notes": "Free listing. Dev-tool / tech-stack focused." },
-    { "name": "Uneed",           "url": "https://www.uneed.best/",       "priceUsd": 14.99, "dr": 75, "status": "active", "notes": "Free queue available; paid slot skips the wait." },
-    { "name": "ToolFame",        "url": "https://toolfame.com/",         "priceUsd": 14.99, "dr": 75, "status": "active" },
-    { "name": "LaunchIgniter",   "url": "https://launchigniter.com/",    "priceUsd": 15,    "dr": 74, "status": "active" },
-    { "name": "PeerPush",        "url": "https://peerpush.com/",         "priceUsd": 39,    "dr": 74, "status": "active" },
-    { "name": "NickLaunches",    "url": "https://nicklaunches.com/",     "priceUsd": 19,    "dr": 74, "status": "active" },
-    { "name": "Startupbase",     "url": "https://startupbase.io/",       "priceUsd": 15,    "dr": 73, "status": "active" },
-    { "name": "TinyLaunch",      "url": "https://www.tinylaunch.com/",   "priceUsd": 39,    "dr": 73, "status": "active" },
-    { "name": "Open-Launch",     "url": "https://open-launch.com/",      "priceUsd": 12,    "dr": 72, "status": "active", "notes": "Open source launch platform." },
-    { "name": "Startup Fast",    "url": "https://www.startupfa.st/",     "priceUsd": 19,    "dr": 72, "status": "active" },
-    { "name": "TinyShelf",       "url": "https://www.tinyshelf.co/",     "priceUsd": 19,    "dr": 71, "status": "active" },
-    { "name": "Tiny Startups",   "url": "https://www.tinystartups.com/", "priceUsd": 49,    "dr": 71, "status": "active" },
-    { "name": "Launch Llama",    "url": "https://tools.launchllama.co/", "priceUsd": 39,    "dr": 71, "status": "active" },
-    { "name": "MicroLaunch",     "url": "https://microlaunch.net/",      "priceUsd": 39,    "dr": 63, "status": "active" },
-    { "name": "IndieHunt",       "url": "https://indiehunt.io",          "priceUsd": 19,    "dr": 62, "status": "active" },
-    { "name": "LaunchVault",     "url": "https://www.launchvault.dev/",  "priceUsd": 9.99,  "dr": 55, "status": "active" },
-    { "name": "StartupTrusted",  "url": "https://startuptrusted.com/",   "priceUsd": 9,     "dr": 54, "status": "active" },
-    { "name": "Ramen.tools",     "url": "https://ramen.tools/",          "priceUsd": 0,     "dr": 47, "status": "active", "notes": "Free listing." },
-    { "name": "NoonLaunch",      "url": "https://noonlaunch.com/",       "priceUsd": 11,    "dr": 45, "status": "active" },
-    { "name": "DevHub",          "url": "https://devhub.best",           "priceUsd": 9.9,   "dr": 39, "status": "active" },
-    { "name": "Shipyard HQ",     "url": "https://shipyardhq.dev/",       "priceUsd": 9.99,  "dr": 35, "status": "active" },
-    { "name": "Resource.fyi",    "url": "https://resource.fyi",          "priceUsd": 49,    "dr": 31, "status": "active" },
-
-    { "name": "Outbid",             "url": null,                                  "priceUsd": 10, "dr": 71,   "status": "skipped", "notes": "Far more outgoing than incoming links — weak link equity for the price." },
-    { "name": "Index by Dodo Payments", "url": "https://index.dodopayments.com/", "priceUsd": 0,  "dr": null, "status": "skipped", "notes": "Curated — not accepting general submissions." },
-    { "name": "PromoteProject",     "url": "https://www.promoteproject.com/",     "priceUsd": 0,  "dr": null, "status": "skipped", "notes": "Ad-heavy pages; poor placement quality." }
+    {
+      "name": "Findly Tools",
+      "url": "https://findly.tools/",
+      "priceUsd": 29,
+      "dr": 81,
+      "status": "active"
+    },
+    {
+      "name": "StackShare",
+      "url": "https://stackshare.io/",
+      "priceUsd": 0,
+      "dr": 78,
+      "status": "active",
+      "notes": "Free listing. Dev-tool / tech-stack focused."
+    },
+    {
+      "name": "Uneed",
+      "url": "https://www.uneed.best/",
+      "priceUsd": 14.99,
+      "dr": 75,
+      "status": "active",
+      "notes": "Free queue available; paid slot skips the wait.",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://www.uneed.best/tool/flowly",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "ToolFame",
+      "url": "https://toolfame.com/",
+      "priceUsd": 14.99,
+      "dr": 75,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://toolfame.com/item/toolfame",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "1/8"
+    },
+    {
+      "name": "LaunchIgniter",
+      "url": "https://launchigniter.com/",
+      "priceUsd": 15,
+      "dr": 74,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://launchigniter.com/product/handler-vibe-marketing-for-app-makers",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/3"
+    },
+    {
+      "name": "PeerPush",
+      "url": "https://peerpush.com/",
+      "priceUsd": 39,
+      "dr": 74,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://peerpush.com/p/dawnpulse",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "NickLaunches",
+      "url": "https://nicklaunches.com/",
+      "priceUsd": 19,
+      "dr": 74,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://nicklaunches.com/products/markdown-reader/",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "Startupbase",
+      "url": "https://startupbase.io/",
+      "priceUsd": 15,
+      "dr": 73,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://startupbase.io/products/puremoney-lol",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "6/8"
+    },
+    {
+      "name": "TinyLaunch",
+      "url": "https://www.tinylaunch.com/",
+      "priceUsd": 39,
+      "dr": 73,
+      "status": "active"
+    },
+    {
+      "name": "Open-Launch",
+      "url": "https://open-launch.com/",
+      "priceUsd": 12,
+      "dr": 72,
+      "status": "active",
+      "notes": "Open source launch platform.",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://open-launch.com/projects/wakebolt",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "6/8"
+    },
+    {
+      "name": "Startup Fast",
+      "url": "https://www.startupfa.st/",
+      "priceUsd": 19,
+      "dr": 72,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://www.startupfa.st/projects/aidorable",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "2/8"
+    },
+    {
+      "name": "TinyShelf",
+      "url": "https://www.tinyshelf.co/",
+      "priceUsd": 19,
+      "dr": 71,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://www.tinyshelf.co/tools/my2kbuilder",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "5/8"
+    },
+    {
+      "name": "Tiny Startups",
+      "url": "https://www.tinystartups.com/",
+      "priceUsd": 49,
+      "dr": 71,
+      "status": "active"
+    },
+    {
+      "name": "Launch Llama",
+      "url": "https://tools.launchllama.co/",
+      "priceUsd": 39,
+      "dr": 71,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://tools.launchllama.co/products/clawteams",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "MicroLaunch",
+      "url": "https://microlaunch.net/",
+      "priceUsd": 39,
+      "dr": 63,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://microlaunch.net/p/citegraph",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "IndieHunt",
+      "url": "https://indiehunt.io",
+      "priceUsd": 19,
+      "dr": 62,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://indiehunt.io/project/magicshot",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "2/8"
+    },
+    {
+      "name": "LaunchVault",
+      "url": "https://www.launchvault.dev/",
+      "priceUsd": 9.99,
+      "dr": 55,
+      "status": "active",
+      "linkPolicy": "mixed",
+      "linkPolicyEvidence": "https://www.launchvault.dev/projects/submit",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "6/8"
+    },
+    {
+      "name": "StartupTrusted",
+      "url": "https://startuptrusted.com/",
+      "priceUsd": 9,
+      "dr": 54,
+      "status": "active",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://startuptrusted.com/startup/orelon",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "Ramen.tools",
+      "url": "https://ramen.tools/",
+      "priceUsd": 0,
+      "dr": 47,
+      "status": "active",
+      "notes": "Free listing."
+    },
+    {
+      "name": "NoonLaunch",
+      "url": "https://noonlaunch.com/",
+      "priceUsd": 11,
+      "dr": 45,
+      "status": "active",
+      "featured": true,
+      "notes": "Maintainer's own product — see disclosure below.",
+      "linkPolicy": "dofollow",
+      "linkPolicyEvidence": "https://noonlaunch.com/product/colleator",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "0/8"
+    },
+    {
+      "name": "DevHub",
+      "url": "https://devhub.best",
+      "priceUsd": 9.9,
+      "dr": 39,
+      "status": "active",
+      "linkPolicy": "nofollow",
+      "linkPolicyEvidence": "https://devhub.best/projects/taxicloud#comments",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "7/7"
+    },
+    {
+      "name": "Shipyard HQ",
+      "url": "https://shipyardhq.dev/",
+      "priceUsd": 9.99,
+      "dr": 35,
+      "status": "active"
+    },
+    {
+      "name": "Resource.fyi",
+      "url": "https://resource.fyi",
+      "priceUsd": 49,
+      "dr": 31,
+      "status": "active",
+      "linkPolicy": "nofollow",
+      "linkPolicyEvidence": "https://resource.fyi/products/ezier-ai",
+      "linkPolicyCheckedOn": "2026-09-06",
+      "linkPolicySample": "8/8"
+    },
+    {
+      "name": "Outbid",
+      "url": null,
+      "priceUsd": 10,
+      "dr": 71,
+      "status": "skipped",
+      "notes": "Far more outgoing than incoming links — weak link equity for the price."
+    },
+    {
+      "name": "Index by Dodo Payments",
+      "url": "https://index.dodopayments.com/",
+      "priceUsd": 0,
+      "dr": null,
+      "status": "skipped",
+      "notes": "Curated — not accepting general submissions."
+    },
+    {
+      "name": "PromoteProject",
+      "url": "https://www.promoteproject.com/",
+      "priceUsd": 0,
+      "dr": null,
+      "status": "skipped",
+      "notes": "Ad-heavy pages; poor placement quality."
+    }
   ]
 }
