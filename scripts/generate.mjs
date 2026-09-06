@@ -52,34 +52,13 @@ const byDr = (a, b) => (b.dr ?? -1) - (a.dr ?? -1);
 const active = directories.filter((d) => d.status === 'active').sort(byDr);
 const skipped = directories.filter((d) => d.status === 'skipped').sort(byDr);
 
-/**
- * Featured entries are pinned to a fixed slot instead of falling where their DR
- * puts them. They are marked with a star in the table and disclosed directly
- * beneath it: a list that advertises itself as DR-ranked and then quietly
- * promotes an entry out of rank order is an ad wearing a ranking's clothes.
- */
-const FEATURED_SLOT = 4; // 1-indexed position in the rendered table
-const featured = active.filter((d) => d.featured);
-const ordered = active.filter((d) => !d.featured);
-featured.forEach((d, i) => ordered.splice(FEATURED_SLOT - 1 + i, 0, d));
-
 const row = (d, i) =>
-  `| ${i + 1} | ${link(d)}${d.featured ? ' ★' : ''} | ${d.dr ?? '—'} | ${price(d)} | ${value(d)} | ${linkPolicy(d)} | ${d.notes ?? ''} |`;
+  `| ${i + 1} | ${link(d)} | ${d.dr ?? '—'} | ${price(d)} | ${value(d)} | ${linkPolicy(d)} | ${d.notes ?? ''} |`;
 
 const activeTable = [
   '| # | Directory | DR | Price | DR / $ | Links | Notes |',
   '|---|-----------|---:|------:|-------:|-------|-------|',
-  ...ordered.map(row),
-  ...(featured.length
-    ? [
-        '',
-        `★ **Pinned, not ranked.** ${featured
-          .map((d) => d.name)
-          .join(', ')} ${featured.length === 1 ? 'is' : 'are'} maintained by the author of this list and ${
-          featured.length === 1 ? 'sits' : 'sit'
-        } at a fixed slot regardless of DR. Every other row is in strict DR order. See [Disclosure](#disclosure).`,
-      ]
-    : []),
+  ...active.map(row),
 ].join('\n');
 
 const skippedTable = [
@@ -130,7 +109,7 @@ function fill(md, key, body) {
 const trackerPath = join(root, 'templates', 'tracker.csv');
 const trackerCsv = [
   'directory,url,price_usd,submitted_on,status,live_listing_url,approved_on,referrals_30d,notes',
-  ...ordered.map((d) => `"${d.name}","${d.url ?? ''}",${d.priceUsd},,,,,,`),
+  ...active.map((d) => `"${d.name}","${d.url ?? ''}",${d.priceUsd},,,,,,`),
 ].join('\n') + '\n';
 
 const original = readFileSync(readmePath, 'utf8');

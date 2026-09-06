@@ -25,28 +25,26 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 | 1 | [Findly Tools](https://findly.tools/) | 81 | $29 | 2.8 | — |  |
 | 2 | [StackShare](https://stackshare.io/) | 78 | Free | ∞ | — | Free listing. Dev-tool / tech-stack focused. |
 | 3 | [Uneed](https://www.uneed.best/) | 75 | $14.99 | 5.0 | dofollow | Free queue available; paid slot skips the wait. |
-| 4 | [NoonLaunch](https://noonlaunch.com/) ★ | 45 | $11 | 4.1 | dofollow | Maintainer's own product — see disclosure below. |
-| 5 | [ToolFame](https://toolfame.com/) | 75 | $14.99 | 5.0 | mixed (1/8) |  |
-| 6 | [LaunchIgniter](https://launchigniter.com/) | 74 | $15 | 4.9 | dofollow |  |
-| 7 | [PeerPush](https://peerpush.com/) | 74 | $39 | 1.9 | dofollow |  |
-| 8 | [NickLaunches](https://nicklaunches.com/) | 74 | $19 | 3.9 | dofollow |  |
-| 9 | [Startupbase](https://startupbase.io/) | 73 | $15 | 4.9 | mixed (6/8) |  |
-| 10 | [TinyLaunch](https://www.tinylaunch.com/) | 73 | $39 | 1.9 | — |  |
-| 11 | [Open-Launch](https://open-launch.com/) | 72 | $12 | 6.0 | mixed (6/8) | Open source launch platform. |
-| 12 | [Startup Fast](https://www.startupfa.st/) | 72 | $19 | 3.8 | mixed (2/8) |  |
-| 13 | [TinyShelf](https://www.tinyshelf.co/) | 71 | $19 | 3.7 | mixed (5/8) |  |
-| 14 | [Tiny Startups](https://www.tinystartups.com/) | 71 | $49 | 1.4 | — |  |
-| 15 | [Launch Llama](https://tools.launchllama.co/) | 71 | $39 | 1.8 | dofollow |  |
-| 16 | [MicroLaunch](https://microlaunch.net/) | 63 | $39 | 1.6 | dofollow |  |
-| 17 | [IndieHunt](https://indiehunt.io) | 62 | $19 | 3.3 | mixed (2/8) |  |
-| 18 | [LaunchVault](https://www.launchvault.dev/) | 55 | $9.99 | 5.5 | mixed (6/8) |  |
-| 19 | [StartupTrusted](https://startuptrusted.com/) | 54 | $9 | 6.0 | dofollow |  |
-| 20 | [Ramen.tools](https://ramen.tools/) | 47 | Free | ∞ | — | Free listing. |
+| 4 | [ToolFame](https://toolfame.com/) | 75 | $14.99 | 5.0 | mixed (1/8) |  |
+| 5 | [LaunchIgniter](https://launchigniter.com/) | 74 | $15 | 4.9 | dofollow |  |
+| 6 | [PeerPush](https://peerpush.com/) | 74 | $39 | 1.9 | dofollow |  |
+| 7 | [NickLaunches](https://nicklaunches.com/) | 74 | $19 | 3.9 | dofollow |  |
+| 8 | [Startupbase](https://startupbase.io/) | 73 | $15 | 4.9 | mixed (6/8) |  |
+| 9 | [TinyLaunch](https://www.tinylaunch.com/) | 73 | $39 | 1.9 | — |  |
+| 10 | [Open-Launch](https://open-launch.com/) | 72 | $12 | 6.0 | mixed (6/8) | Open source launch platform. |
+| 11 | [Startup Fast](https://www.startupfa.st/) | 72 | $19 | 3.8 | mixed (2/8) |  |
+| 12 | [TinyShelf](https://www.tinyshelf.co/) | 71 | $19 | 3.7 | mixed (5/8) |  |
+| 13 | [Tiny Startups](https://www.tinystartups.com/) | 71 | $49 | 1.4 | — |  |
+| 14 | [Launch Llama](https://tools.launchllama.co/) | 71 | $39 | 1.8 | dofollow |  |
+| 15 | [MicroLaunch](https://microlaunch.net/) | 63 | $39 | 1.6 | dofollow |  |
+| 16 | [IndieHunt](https://indiehunt.io) | 62 | $19 | 3.3 | mixed (2/8) |  |
+| 17 | [LaunchVault](https://www.launchvault.dev/) | 55 | $9.99 | 5.5 | mixed (6/8) |  |
+| 18 | [StartupTrusted](https://startuptrusted.com/) | 54 | $9 | 6.0 | dofollow |  |
+| 19 | [Ramen.tools](https://ramen.tools/) | 47 | Free | ∞ | — | Free listing. |
+| 20 | [NoonLaunch](https://noonlaunch.com/) | 45 | $11 | 4.1 | dofollow | Maintainer's own product — see disclosure. Ranked by DR like everything else. |
 | 21 | [DevHub](https://devhub.best) | 39 | $9.90 | 3.9 | nofollow |  |
 | 22 | [Shipyard HQ](https://shipyardhq.dev/) | 35 | $9.99 | 3.5 | — |  |
 | 23 | [Resource.fyi](https://resource.fyi) | 31 | $49 | 0.6 | nofollow |  |
-
-★ **Pinned, not ranked.** NoonLaunch is maintained by the author of this list and sits at a fixed slot regardless of DR. Every other row is in strict DR order. See [Disclosure](#disclosure).
 <!-- END:TABLE -->
 
 ## Skipped
@@ -157,11 +155,9 @@ Corrections are as welcome as additions — a wrong price or a dead link is wors
 
 ## Disclosure
 
-**NoonLaunch is my own product.** It appears in this list at a pinned slot (marked ★) rather than in DR order, and it is the only entry that gets that treatment. Everything else is in strict DR order with no exceptions.
+**NoonLaunch is my own product.** It sits at its DR position in the table like every other entry, with its real numbers printed (DR 45, $11) — no pin, no star, no special treatment. There are no paid placements in this list and no affiliate links; no directory has paid to be included or ranked.
 
-I'm stating it plainly because the alternative — a "DR-ranked" list that quietly floats the author's own site up the table — is exactly the kind of thing that makes these lists worthless. Its real numbers (DR 45, $11) are printed in the table like everyone else's, so you can discount it accordingly. If you think the pin is unjustified, say so in an issue; the ordering logic is one constant in [`scripts/generate.mjs`](scripts/generate.mjs).
-
-No directory in this list has paid to be here, and there are no affiliate links.
+The ordering is a single sort on DR in [`scripts/generate.mjs`](scripts/generate.mjs), with no exception branch, so you can verify that claim rather than take my word for it.
 
 ## License
 
