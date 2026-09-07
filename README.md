@@ -45,6 +45,8 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 | 21 | [DevHub](https://devhub.best) | 39 | $9.90 | 3.9 | nofollow |  |
 | 22 | [Shipyard HQ](https://shipyardhq.dev/) | 35 | $9.99 | 3.5 | - |  |
 | 23 | [Resource.fyi](https://resource.fyi) | 31 | $49 | 0.6 | nofollow |  |
+| 24 | [EarlyHunt](https://earlyhunt.com) | 62 | $19 | 3.3 | mixed (2/8) |  |
+| 25 | [Aura++](https://auraplusplus.com) | 72 | $29 | 3.3 | mixed (5/8) |  |
 <!-- END:TABLE -->
 
 ## Skipped
