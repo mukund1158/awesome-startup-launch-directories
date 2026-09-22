@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "meta": {
-    "lastUpdated": "2026-09-06",
+    "lastUpdated": "2026-09-22",
     "drSource": "Ahrefs Domain Rating (point-in-time snapshot)",
     "currency": "USD",
     "linkPolicyCheckedOn": "2026-09-06"
@@ -264,6 +264,18 @@
       "dr": null,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality."
+    },
+    {
+      "name": "ToolaGator",
+      "url": "https://toolagator.com/",
+      "priceUsd": 49,
+      "dr": 63,
+      "status": "active",
+      "notes": "$49 one-time lifetime listing; reviewed in 1-3 business days. AI-tool focused.",
+      "linkPolicy": "nofollow",
+      "linkPolicyEvidence": "https://toolagator.com/ai-tools/mubert/",
+      "linkPolicyCheckedOn": "2026-09-22",
+      "linkPolicySample": "8/8"
     }
   ]
 }
