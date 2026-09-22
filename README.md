@@ -5,12 +5,12 @@
 Most "300+ places to launch your startup" lists are link dumps. Half the sites are dead, none of them tell you what a listing costs, and none tell you whether the backlink is worth anything. This one is small on purpose: every entry has been checked, priced, and ranked by **Ahrefs Domain Rating (DR)** - and the ones that weren't worth it are listed too, with the reason.
 
 <!-- BEGIN:STATS -->
-- **23** directories listed (**2** free, **21** paid)
+- **24** directories listed (**2** free, **22** paid)
 - **14** of them are **DR 70+**
-- Submitting to every paid listing here costs **$480.86** total
+- Submitting to every paid listing here costs **$529.86** total
 - Cheapest **paid** DR 70+ placement: [Open-Launch](https://open-launch.com/) at **$12** (DR 72)
-- Outbound link policy measured on **17** of them: **8 dofollow**, **2 nofollow**, **7 mixed**
-- DR figures last refreshed **2026-09-06**; link policy **2026-09-06**
+- Outbound link policy measured on **18** of them: **8 dofollow**, **3 nofollow**, **7 mixed**
+- DR figures last refreshed **2026-09-22**; link policy **2026-09-06**
 <!-- END:STATS -->
 
 ---
@@ -37,14 +37,15 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 | 13 | [Tiny Startups](https://www.tinystartups.com/) | 71 | $49 | 1.4 | - |  |
 | 14 | [Launch Llama](https://tools.launchllama.co/) | 71 | $39 | 1.8 | dofollow |  |
 | 15 | [MicroLaunch](https://microlaunch.net/) | 63 | $39 | 1.6 | dofollow |  |
-| 16 | [IndieHunt](https://indiehunt.io) | 62 | $19 | 3.3 | mixed (2/8) |  |
-| 17 | [LaunchVault](https://www.launchvault.dev/) | 55 | $9.99 | 5.5 | mixed (6/8) |  |
-| 18 | [StartupTrusted](https://startuptrusted.com/) | 54 | $9 | 6.0 | dofollow |  |
-| 19 | [Ramen.tools](https://ramen.tools/) | 47 | Free | ∞ | - | Free listing. |
-| 20 | [NoonLaunch](https://noonlaunch.com/) | 45 | $11 | 4.1 | dofollow | Maintainer's own product - see disclosure. Ranked by DR like everything else. |
-| 21 | [DevHub](https://devhub.best) | 39 | $9.90 | 3.9 | nofollow |  |
-| 22 | [Shipyard HQ](https://shipyardhq.dev/) | 35 | $9.99 | 3.5 | - |  |
-| 23 | [Resource.fyi](https://resource.fyi) | 31 | $49 | 0.6 | nofollow |  |
+| 16 | [ToolaGator](https://toolagator.com/) | 63 | $49 | 1.3 | nofollow | $49 one-time lifetime listing; reviewed in 1-3 business days. AI-tool focused. |
+| 17 | [IndieHunt](https://indiehunt.io) | 62 | $19 | 3.3 | mixed (2/8) |  |
+| 18 | [LaunchVault](https://www.launchvault.dev/) | 55 | $9.99 | 5.5 | mixed (6/8) |  |
+| 19 | [StartupTrusted](https://startuptrusted.com/) | 54 | $9 | 6.0 | dofollow |  |
+| 20 | [Ramen.tools](https://ramen.tools/) | 47 | Free | ∞ | - | Free listing. |
+| 21 | [NoonLaunch](https://noonlaunch.com/) | 45 | $11 | 4.1 | dofollow | Maintainer's own product - see disclosure. Ranked by DR like everything else. |
+| 22 | [DevHub](https://devhub.best) | 39 | $9.90 | 3.9 | nofollow |  |
+| 23 | [Shipyard HQ](https://shipyardhq.dev/) | 35 | $9.99 | 3.5 | - |  |
+| 24 | [Resource.fyi](https://resource.fyi) | 31 | $49 | 0.6 | nofollow |  |
 <!-- END:TABLE -->
 
 ## Skipped
