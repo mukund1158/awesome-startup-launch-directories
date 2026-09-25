@@ -34,7 +34,20 @@ const value = (d) => {
   return (d.dr / d.priceUsd).toFixed(1);
 };
 
-const link = (d) => (d.url ? `[${d.name}](${d.url})` : d.name);
+/**
+ * README links carry UTM tags so directory owners can see this list in their
+ * analytics. They are added here, not stored in the dataset: the JSON keeps
+ * canonical URLs so the link checker, dofollow audit and duplicate-domain
+ * check all work on the real address. URL handles any existing query string.
+ */
+const UTM = { utm_source: 'awesome-startup-launch-directories', utm_medium: 'referral' };
+const tracked = (url) => {
+  const u = new URL(url);
+  for (const [k, v] of Object.entries(UTM)) u.searchParams.set(k, v);
+  return u.toString();
+};
+
+const link = (d) => (d.url ? `[${d.name}](${tracked(d.url)})` : d.name);
 
 /**
  * How the directory marks up its outbound link to the listed product.

@@ -8,7 +8,7 @@ Most "300+ places to launch your startup" lists are link dumps. Half the sites a
 - **23** directories listed (**2** free, **21** paid)
 - **14** of them are **DR 70+**
 - Submitting to every paid listing here costs **$480.86** total
-- Cheapest **paid** DR 70+ placement: [Open-Launch](https://open-launch.com/) at **$12** (DR 72)
+- Cheapest **paid** DR 70+ placement: [Open-Launch](https://open-launch.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) at **$12** (DR 72)
 - Outbound link policy measured on **17** of them: **8 dofollow**, **2 nofollow**, **7 mixed**
 - DR figures last refreshed **2026-09-25**; link policy **2026-09-06**
 - Domain Rating by [Ahrefs](https://ahrefs.com/)
@@ -23,29 +23,29 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 <!-- BEGIN:TABLE -->
 | # | Directory | DR | Price | DR / $ | Links | Notes |
 |---|-----------|---:|------:|-------:|-------|-------|
-| 1 | [Findly Tools](https://findly.tools/) | 81 | $29 | 2.8 | - |  |
-| 2 | [StackShare](https://stackshare.io/) | 78 | Free | ∞ | - | Free listing. Dev-tool / tech-stack focused. |
-| 3 | [Uneed](https://www.uneed.best/) | 76 | $14.99 | 5.1 | dofollow | Free queue available; paid slot skips the wait. |
-| 4 | [ToolFame](https://toolfame.com/) | 75 | $14.99 | 5.0 | mixed (1/8) |  |
-| 5 | [LaunchIgniter](https://launchigniter.com/) | 75 | $15 | 5.0 | dofollow |  |
-| 6 | [PeerPush](https://peerpush.com/) | 75 | $39 | 1.9 | dofollow |  |
-| 7 | [NickLaunches](https://nicklaunches.com/) | 75 | $19 | 3.9 | dofollow |  |
-| 8 | [Startupbase](https://startupbase.io/) | 73 | $15 | 4.9 | mixed (6/8) |  |
-| 9 | [TinyLaunch](https://www.tinylaunch.com/) | 73 | $39 | 1.9 | - |  |
-| 10 | [Startup Fast](https://www.startupfa.st/) | 73 | $19 | 3.8 | mixed (2/8) |  |
-| 11 | [Open-Launch](https://open-launch.com/) | 72 | $12 | 6.0 | mixed (6/8) | Open source launch platform. |
-| 12 | [TinyShelf](https://www.tinyshelf.co/) | 72 | $19 | 3.8 | mixed (5/8) |  |
-| 13 | [Launch Llama](https://tools.launchllama.co/) | 72 | $39 | 1.8 | dofollow |  |
-| 14 | [Tiny Startups](https://www.tinystartups.com/) | 71 | $49 | 1.4 | - |  |
-| 15 | [MicroLaunch](https://microlaunch.net/) | 64 | $39 | 1.6 | dofollow |  |
-| 16 | [IndieHunt](https://indiehunt.io) | 63 | $19 | 3.3 | mixed (2/8) |  |
-| 17 | [StartupTrusted](https://startuptrusted.com/) | 57 | $9 | 6.3 | dofollow |  |
-| 18 | [LaunchVault](https://www.launchvault.dev/) | 56 | $9.99 | 5.6 | mixed (6/8) |  |
-| 19 | [NoonLaunch](https://noonlaunch.com/) | 49 | $11 | 4.5 | dofollow | Maintainer's own product - see disclosure. Ranked by DR like everything else. |
-| 20 | [Ramen.tools](https://ramen.tools/) | 47 | Free | ∞ | - | Free listing. |
-| 21 | [DevHub](https://devhub.best) | 43 | $9.90 | 4.3 | nofollow |  |
-| 22 | [Shipyard HQ](https://shipyardhq.dev/) | 35 | $9.99 | 3.5 | - |  |
-| 23 | [Resource.fyi](https://resource.fyi) | 31 | $49 | 0.6 | nofollow |  |
+| 1 | [Findly Tools](https://findly.tools/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 81 | $29 | 2.8 | - |  |
+| 2 | [StackShare](https://stackshare.io/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 78 | Free | ∞ | - | Free listing. Dev-tool / tech-stack focused. |
+| 3 | [Uneed](https://www.uneed.best/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 76 | $14.99 | 5.1 | dofollow | Free queue available; paid slot skips the wait. |
+| 4 | [ToolFame](https://toolfame.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 75 | $14.99 | 5.0 | mixed (1/8) |  |
+| 5 | [LaunchIgniter](https://launchigniter.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 75 | $15 | 5.0 | dofollow |  |
+| 6 | [PeerPush](https://peerpush.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 75 | $39 | 1.9 | dofollow |  |
+| 7 | [NickLaunches](https://nicklaunches.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 75 | $19 | 3.9 | dofollow |  |
+| 8 | [Startupbase](https://startupbase.io/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 73 | $15 | 4.9 | mixed (6/8) |  |
+| 9 | [TinyLaunch](https://www.tinylaunch.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 73 | $39 | 1.9 | - |  |
+| 10 | [Startup Fast](https://www.startupfa.st/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 73 | $19 | 3.8 | mixed (2/8) |  |
+| 11 | [Open-Launch](https://open-launch.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 72 | $12 | 6.0 | mixed (6/8) | Open source launch platform. |
+| 12 | [TinyShelf](https://www.tinyshelf.co/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 72 | $19 | 3.8 | mixed (5/8) |  |
+| 13 | [Launch Llama](https://tools.launchllama.co/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 72 | $39 | 1.8 | dofollow |  |
+| 14 | [Tiny Startups](https://www.tinystartups.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 71 | $49 | 1.4 | - |  |
+| 15 | [MicroLaunch](https://microlaunch.net/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 64 | $39 | 1.6 | dofollow |  |
+| 16 | [IndieHunt](https://indiehunt.io/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 63 | $19 | 3.3 | mixed (2/8) |  |
+| 17 | [StartupTrusted](https://startuptrusted.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 57 | $9 | 6.3 | dofollow |  |
+| 18 | [LaunchVault](https://www.launchvault.dev/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 56 | $9.99 | 5.6 | mixed (6/8) |  |
+| 19 | [NoonLaunch](https://noonlaunch.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 49 | $11 | 4.5 | dofollow | Maintainer's own product - see disclosure. Ranked by DR like everything else. |
+| 20 | [Ramen.tools](https://ramen.tools/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 47 | Free | ∞ | - | Free listing. |
+| 21 | [DevHub](https://devhub.best/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 43 | $9.90 | 4.3 | nofollow |  |
+| 22 | [Shipyard HQ](https://shipyardhq.dev/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 35 | $9.99 | 3.5 | - |  |
+| 23 | [Resource.fyi](https://resource.fyi/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 31 | $49 | 0.6 | nofollow |  |
 <!-- END:TABLE -->
 
 ## Skipped
@@ -55,9 +55,9 @@ Directories that were evaluated and deliberately *not* submitted to. Kept here s
 <!-- BEGIN:SKIPPED -->
 | Directory | DR | Price | Why it was skipped |
 |-----------|---:|------:|--------------------|
-| [Index by Dodo Payments](https://index.dodopayments.com/) | 79 | Free | Curated - not accepting general submissions. |
+| [Index by Dodo Payments](https://index.dodopayments.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 79 | Free | Curated - not accepting general submissions. |
 | Outbid | 71 | $10 | Far more outgoing than incoming links - weak link equity for the price. |
-| [PromoteProject](https://www.promoteproject.com/) | 50 | Free | Ad-heavy pages; poor placement quality. |
+| [PromoteProject](https://www.promoteproject.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 50 | Free | Ad-heavy pages; poor placement quality. |
 <!-- END:SKIPPED -->
 
 ---
