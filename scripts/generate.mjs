@@ -87,6 +87,8 @@ const stats = [
     : null,
   `- Outbound link policy measured on **${measured.length}** of them: **${doFollow.length} dofollow**, **${noFollow.length} nofollow**, **${measured.length - doFollow.length - noFollow.length} mixed**`,
   `- DR figures last refreshed **${meta.lastUpdated}**${meta.linkPolicyCheckedOn ? `; link policy **${meta.linkPolicyCheckedOn}**` : ''}`,
+  // Required by the Ahrefs Domain Rating License that the DR figures are published under.
+  '- Domain Rating by [Ahrefs](https://ahrefs.com/)',
 ].filter(Boolean).join('\n');
 
 /**

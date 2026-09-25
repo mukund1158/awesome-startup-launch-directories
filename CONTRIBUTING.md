@@ -48,6 +48,16 @@ Reasons to reject:
 
 Both drift. If you update figures, bump `meta.lastUpdated` in the JSON in the same PR. Please state in the PR where the DR came from (Ahrefs free checker, paid Ahrefs, etc.) - a mixed-source number is worse than an absent one.
 
+To refresh every DR at once, use Ahrefs' free [domain-rating-free](https://docs.ahrefs.com/en/api/reference/public/get-domain-rating-free) endpoint. It needs a free Ahrefs APIv3 key. Put it in `.env` (gitignored) as `AHREFS_API_KEY=...`, never in a commit, then:
+
+```bash
+node --env-file=.env scripts/refresh-dr.mjs          # dry run: prints old -> new
+node --env-file=.env scripts/refresh-dr.mjs --write  # updates the JSON and meta.lastUpdated
+node scripts/generate.mjs
+```
+
+The figures are published under the Ahrefs Domain Rating License, which requires the "Domain Rating by Ahrefs" credit. The generator adds it to the README stats block; don't remove it.
+
 ## Self-submissions
 
 If you own or work on a directory, you may submit it - **disclose that in the PR description**. It will be held to the same bar as anything else. Undisclosed self-promotion gets closed.
