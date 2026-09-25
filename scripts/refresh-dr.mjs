@@ -29,6 +29,10 @@ const TIMEOUT_MS = 20_000;
 // off on 429 rather than hammering a free endpoint.
 const DELAY_MS = 1_000;
 const MAX_RETRIES = 3;
+// While Ahrefs is recalculating, consecutive calls for the same domain can
+// differ by 1 (different backends answering). Taking several readings and
+// keeping the most common one stops a single call from deciding the number.
+const SAMPLES = 3;
 
 const key = process.env.AHREFS_API_KEY?.trim();
 if (!key) {
@@ -50,9 +54,11 @@ async function fetchDr(domain) {
         signal: controller.signal,
         headers: { authorization: `Bearer ${key}`, accept: 'application/json' },
       });
-      if (res.status === 429 && attempt < MAX_RETRIES) {
+      // 429 is rate limiting; 5xx has been seen intermittently from this
+      // endpoint and succeeds on retry. Both are worth waiting out.
+      if ((res.status === 429 || res.status >= 500) && attempt < MAX_RETRIES) {
         const wait = Number(res.headers.get('retry-after')) * 1000 || 2 ** attempt * 5_000;
-        console.error(`  429 on ${domain}, retrying in ${wait / 1000}s`);
+        console.error(`  HTTP ${res.status} on ${domain}, retrying in ${wait / 1000}s`);
         await sleep(wait);
         continue;
       }
@@ -85,10 +91,26 @@ for (const d of doc.directories) {
     continue;
   }
   const domain = domainOf(d.url);
-  const r = await fetchDr(domain);
   // The dataset stores DR as an integer, matching how Ahrefs displays it.
-  results.push({ name: d.name, domain, old: d.dr, ...(r.error ? r : { dr: Math.round(r.dr), raw: r.dr }) });
-  await sleep(DELAY_MS);
+  const readings = [];
+  let lastError;
+  for (let i = 0; i < SAMPLES; i++) {
+    const r = await fetchDr(domain);
+    if (r.error) lastError = r.error;
+    else readings.push(Math.round(r.dr));
+    await sleep(DELAY_MS);
+  }
+  if (!readings.length) {
+    results.push({ name: d.name, domain, old: d.dr, error: lastError });
+    continue;
+  }
+  // Most common reading. A tie (only possible when a sample failed) takes the
+  // higher value: an arbitrary but deterministic choice, and the entry is
+  // flagged as unstable in the output so it can be re-checked.
+  const counts = new Map();
+  for (const v of readings) counts.set(v, (counts.get(v) ?? 0) + 1);
+  const dr = [...counts].sort((a, b) => b[1] - a[1] || b[0] - a[0])[0][0];
+  results.push({ name: d.name, domain, old: d.dr, dr, raw: readings.join('/'), unstable: counts.size > 1 });
 }
 
 for (const r of results) {
@@ -96,12 +118,12 @@ for (const r of results) {
   if (r.error) { console.log(`!   ${r.name.padEnd(24)} ${r.domain}: ${r.error}`); continue; }
   const delta = r.old == null ? 'new' : r.dr - r.old;
   const mark = delta === 0 ? '=' : '*';
-  console.log(`${mark}   ${r.name.padEnd(24)} ${String(r.old ?? '-').padStart(3)} -> ${String(r.dr).padStart(3)}  (${delta === 0 ? 'same' : delta === 'new' ? 'new' : (delta > 0 ? '+' : '') + delta}, raw ${r.raw})`);
+  console.log(`${mark}   ${r.name.padEnd(24)} ${String(r.old ?? '-').padStart(3)} -> ${String(r.dr).padStart(3)}  (${delta === 0 ? 'same' : delta === 'new' ? 'new' : (delta > 0 ? '+' : '') + delta}, readings ${r.raw}${r.unstable ? ', UNSTABLE' : ''})`);
 }
 
 const failed = results.filter((r) => r.error);
 const changed = results.filter((r) => r.dr != null && r.dr !== r.old);
-console.log(`\n${results.length} entries · ${changed.length} changed · ${failed.length} failed`);
+console.log(`\n${results.length} entries · ${changed.length} changed · ${failed.length} failed · ${results.filter((r) => r.unstable).length} unstable`);
 
 if (process.argv.includes('--write')) {
   // Only write when every lookup succeeded: a partial refresh would stamp
