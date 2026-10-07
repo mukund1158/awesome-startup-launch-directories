@@ -5,7 +5,7 @@
 Most "300+ places to launch your startup" lists are link dumps. Half the sites are dead, none of them tell you what a listing costs, and none tell you whether the backlink is worth anything. This one is small on purpose: every entry has been checked, priced, and ranked by **Ahrefs Domain Rating (DR)** - and the ones that weren't worth it are listed too, with the reason.
 
 <!-- BEGIN:STATS -->
-- **23** directories listed (**2** free, **21** paid)
+- **24** directories listed (**3** free, **21** paid)
 - **14** of them are **DR 70+**
 - Submitting to every paid listing here costs **$480.86** total
 - Cheapest **paid** DR 70+ placement: [Open-Launch](https://open-launch.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) at **$12** (DR 71)
@@ -46,6 +46,7 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 | 21 | [DevHub](https://devhub.best/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 45 | $9.90 | 4.5 | nofollow |  |
 | 22 | [Shipyard HQ](https://shipyardhq.dev/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 35 | $9.99 | 3.5 | - |  |
 | 23 | [Resource.fyi](https://resource.fyi/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 32 | $49 | 0.7 | nofollow |  |
+| 24 | [FalcoScan](https://falcoscan.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | - | Free | - | - | AI products only. Free listing with a profile page in its market; makers get their private rank by email. |
 <!-- END:TABLE -->
 
 ## Skipped
