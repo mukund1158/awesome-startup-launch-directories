@@ -264,6 +264,14 @@
       "dr": 50,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality."
+    },
+    {
+      "name": "FalcoScan",
+      "url": "https://falcoscan.com/",
+      "priceUsd": 0,
+      "dr": null,
+      "status": "active",
+      "notes": "AI products only. Free listing with a profile page in its market; makers get their private rank by email."
     }
   ]
 }
