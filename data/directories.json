@@ -37,7 +37,7 @@
     {
       "name": "ToolFame",
       "url": "https://toolfame.com/",
-      "priceUsd": 14.99,
+      "priceUsd": 14.9,
       "dr": 76,
       "status": "active",
       "linkPolicy": "mixed",
@@ -48,7 +48,7 @@
     {
       "name": "LaunchIgniter",
       "url": "https://launchigniter.com/",
-      "priceUsd": 15,
+      "priceUsd": 12,
       "dr": 75,
       "status": "active",
       "linkPolicy": "dofollow",
@@ -87,7 +87,8 @@
       "linkPolicy": "mixed",
       "linkPolicyEvidence": "https://startupbase.io/products/puremoney-lol",
       "linkPolicyCheckedOn": "2026-09-06",
-      "linkPolicySample": "6/8"
+      "linkPolicySample": "6/8",
+      "notes": "Price is the pay-what-you-want Outrank board (from $15, permanent dofollow). Standard Premium launch is $39."
     },
     {
       "name": "TinyLaunch",
@@ -102,7 +103,7 @@
       "priceUsd": 12,
       "dr": 71,
       "status": "active",
-      "notes": "Open source launch platform.",
+      "notes": "Open source launch platform. Free slots booked into 2027.",
       "linkPolicy": "mixed",
       "linkPolicyEvidence": "https://open-launch.com/projects/wakebolt",
       "linkPolicyCheckedOn": "2026-09-06",
@@ -128,14 +129,16 @@
       "linkPolicy": "mixed",
       "linkPolicyEvidence": "https://www.tinyshelf.co/tools/my2kbuilder",
       "linkPolicyCheckedOn": "2026-09-06",
-      "linkPolicySample": "5/8"
+      "linkPolicySample": "5/8",
+      "notes": "Price unverified: the paid upgrade is only shown after sign-in."
     },
     {
       "name": "Tiny Startups",
       "url": "https://www.tinystartups.com/",
-      "priceUsd": 49,
+      "priceUsd": 91.32,
       "dr": 72,
-      "status": "active"
+      "status": "active",
+      "notes": "Charged in GBP: £69 (USD at the ECB rate of 2026-10-12). Free submissions currently paused."
     },
     {
       "name": "Launch Llama",
@@ -151,13 +154,14 @@
     {
       "name": "MicroLaunch",
       "url": "https://microlaunch.net/",
-      "priceUsd": 39,
+      "priceUsd": 49,
       "dr": 64,
       "status": "active",
       "linkPolicy": "dofollow",
       "linkPolicyEvidence": "https://microlaunch.net/p/citegraph",
       "linkPolicyCheckedOn": "2026-09-06",
-      "linkPolicySample": "0/8"
+      "linkPolicySample": "0/8",
+      "notes": "Regular price. Often discounted: $39 with a 20% promo in Oct 2026."
     },
     {
       "name": "IndieHunt",
@@ -184,7 +188,7 @@
     {
       "name": "StartupTrusted",
       "url": "https://startuptrusted.com/",
-      "priceUsd": 9,
+      "priceUsd": 11,
       "dr": 60,
       "status": "active",
       "linkPolicy": "dofollow",
@@ -233,13 +237,14 @@
     {
       "name": "Resource.fyi",
       "url": "https://resource.fyi",
-      "priceUsd": 49,
+      "priceUsd": 5,
       "dr": 32,
       "status": "active",
       "linkPolicy": "nofollow",
       "linkPolicyEvidence": "https://resource.fyi/products/ezier-ai",
       "linkPolicyCheckedOn": "2026-09-06",
-      "linkPolicySample": "8/8"
+      "linkPolicySample": "8/8",
+      "notes": "Express tier. Premium is $49. Free slots must be booked 7+ days ahead."
     },
     {
       "name": "Outbid",
@@ -263,7 +268,7 @@
       "priceUsd": 0,
       "dr": 50,
       "status": "skipped",
-      "notes": "Ad-heavy pages; poor placement quality."
+      "notes": "Ad-heavy pages; poor placement quality. Still accepting submissions; paid homepage features $0.99 to $5.99."
     }
   ]
 }
