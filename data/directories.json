@@ -269,6 +269,14 @@
       "dr": 50,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality. Still accepting submissions; paid homepage features $0.99 to $5.99."
+    },
+    {
+      "name": "SaaSCity",
+      "url": "https://saascity.io/",
+      "priceUsd": 0,
+      "dr": null,
+      "status": "active",
+      "notes": "Free listing with manual review; each listing is a building on an isometric city map. Paid tiers optional."
     }
   ]
 }
