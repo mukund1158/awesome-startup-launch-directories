@@ -5,7 +5,7 @@
 Most "300+ places to launch your startup" lists are link dumps. Half the sites are dead, none of them tell you what a listing costs, and none tell you whether the backlink is worth anything. This one is small on purpose: every entry has been checked, priced, and ranked by **Ahrefs Domain Rating (DR)** - and the ones that weren't worth it are listed too, with the reason.
 
 <!-- BEGIN:STATS -->
-- **23** directories listed (**2** free, **21** paid)
+- **24** directories listed (**3** free, **21** paid)
 - **14** of them are **DR 70+**
 - Submitting to every paid listing here costs **$488.09** total
 - Cheapest **paid** DR 70+ placement: [LaunchIgniter](https://launchigniter.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) at **$12** (DR 75)
@@ -46,6 +46,7 @@ Sorted by DR, highest first. **DR / $** is a rough cost-efficiency score (domain
 | 21 | [Ramen.tools](https://ramen.tools/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 47 | Free | ∞ | - | Free listing. |
 | 22 | [Shipyard HQ](https://shipyardhq.dev/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 36 | $9.99 | 3.6 | - |  |
 | 23 | [Resource.fyi](https://resource.fyi/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | 32 | $5 | 6.4 | nofollow | Express tier. Premium is $49. Free slots must be booked 7+ days ahead. |
+| 24 | [RadarMakers](https://radarmakers.com/?utm_source=awesome-startup-launch-directories&utm_medium=referral) | - | Free | - | - | Free listing, reviewed by hand. Product pages link out without nofollow. |
 <!-- END:TABLE -->
 
 ## Skipped

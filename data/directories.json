@@ -269,6 +269,14 @@
       "dr": 50,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality. Still accepting submissions; paid homepage features $0.99 to $5.99."
+    },
+    {
+      "name": "RadarMakers",
+      "url": "https://radarmakers.com/",
+      "priceUsd": 0,
+      "dr": null,
+      "status": "active",
+      "notes": "Free listing, reviewed by hand. Product pages link out without nofollow."
     }
   ]
 }
