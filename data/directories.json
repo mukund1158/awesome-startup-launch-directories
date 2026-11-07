@@ -138,7 +138,7 @@
       "priceUsd": 91.32,
       "dr": 72,
       "status": "active",
-      "notes": "Charged in GBP: £69 (USD at the ECB rate of 2026-10-12). Free submissions currently paused."
+      "notes": "Charged in GBP: \u00a369 (USD at the ECB rate of 2026-10-12). Free submissions currently paused."
     },
     {
       "name": "Launch Llama",
@@ -269,6 +269,14 @@
       "dr": 50,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality. Still accepting submissions; paid homepage features $0.99 to $5.99."
+    },
+    {
+      "name": "Public Prompts",
+      "url": "https://www.publicprompts.art/",
+      "priceUsd": 19.99,
+      "dr": null,
+      "status": "active",
+      "notes": "AI-tools directory. Paid owner submissions: US$19.99 once plus applicable tax before editorial review; no free owner listing. Refunded if declined. Browsing is free. Source: https://www.publicprompts.art/submit (2026-11-07)."
     }
   ]
 }
