@@ -247,6 +247,14 @@
       "notes": "Express tier. Premium is $49. Free slots must be booked 7+ days ahead."
     },
     {
+      "name": "Hokai",
+      "url": "https://hokai.io/",
+      "priceUsd": 10,
+      "dr": null,
+      "status": "active",
+      "notes": "AI products only. Human-written listing page with a followed link; free with a Hokai badge, otherwise $10 launch price (list $50) until 30 Nov 2026."
+    },
+    {
       "name": "Outbid",
       "url": null,
       "priceUsd": 10,
