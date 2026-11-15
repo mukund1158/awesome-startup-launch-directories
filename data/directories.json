@@ -228,6 +228,14 @@
       "linkPolicySample": "7/7"
     },
     {
+      "name": "Awesome Indie",
+      "url": "https://awesomeindie.com/",
+      "priceUsd": 0,
+      "dr": 41,
+      "status": "active",
+      "notes": "Free launch available; paid upgrades optional."
+    },
+    {
       "name": "Shipyard HQ",
       "url": "https://shipyardhq.dev/",
       "priceUsd": 9.99,
