@@ -160,6 +160,10 @@ Corrections are as welcome as additions - a wrong price or a dead link is worse 
 
 The ordering is a single sort on DR in [`scripts/generate.mjs`](scripts/generate.mjs), with no exception branch, so you can verify that claim rather than take my word for it.
 
+### Niche & Vertical Directories
+
+- [No Stairs Please](https://nostairsplease.com/) — Live music venue & booking directory covering small stages across all 50 US states.
+
 ## License
 
 [CC0 1.0 Universal](LICENSE) - public domain. Copy it, fork it, build a tool on top of it, no attribution needed.
