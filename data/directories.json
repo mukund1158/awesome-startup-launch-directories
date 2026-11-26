@@ -269,6 +269,14 @@
       "dr": 50,
       "status": "skipped",
       "notes": "Ad-heavy pages; poor placement quality. Still accepting submissions; paid homepage features $0.99 to $5.99."
+    },
+    {
+      "name": "ToolWorthy",
+      "url": "https://www.toolworthy.ai/",
+      "priceUsd": 49,
+      "dr": null,
+      "status": "active",
+      "notes": "Vendor submission is one-time paid: Fast Listing $49 or Verified Listing $99. No free vendor-submission plan is shown on the submit page (checked 2026-11-26). Browsing the directory is public."
     }
   ]
 }
